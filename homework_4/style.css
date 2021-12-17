@@ -1,0 +1,204 @@
+html{
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after{
+    box-sizing: inherit;
+}
+
+a.text:active,
+a.text:hover,
+a.text {
+    color: #000 !important;
+    text-decoration: none
+}
+
+.cards{
+    position: relative;
+    width: 796px;
+    height: 734px;
+    background:#0d5825;
+}
+
+
+.cards p{
+    color: white;
+    text-align: center;
+    font-size: 25px;
+    padding-top: 40px;
+}
+
+.card {
+    width: 150px;
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    transition: bottom 0.5s ease;
+}
+
+.card.first_card{
+    margin-left: calc(-75px - 60px);
+    margin-bottom: calc(-75px + 10px);
+    transform: rotate(-0.075turn);
+}
+
+.card.second_card{
+    margin-left: -75px;
+    margin-bottom: -75px;
+    transform: rotate(-0.035turn);
+}
+
+.card.third_card{
+    margin-left: calc(-75px + 55px);
+    margin-bottom: calc(-85px);
+    transform: rotate(0.015turn);
+}
+
+.card:hover{
+    bottom: 55%;
+}
+
+.cubes{
+    margin-top: 100px;
+    position: relative;
+    width: 300px;
+    height: 300px;
+    border: black 1px solid;
+}
+
+.cube{
+    width: 100px;
+    height: 100px;
+    position: absolute;
+}
+
+.cube.red{
+    background-color: palevioletred;
+    left: 50px;
+    top: 50px;
+}
+
+.cube.blue{
+    background-color: cornflowerblue;
+    left: 100px;
+    top: 100px;
+}
+
+.cube.green{
+    background-color: palegreen;
+    left: 150px;
+    top: 150px;
+}
+
+
+.menu_here{
+    margin-top: 100px;
+    width: 600px;
+    height: 1000px;
+    text-transform: uppercase;
+    position: relative;
+    color: ghostwhite;
+}
+
+.side_menu{
+    position: absolute;
+    width: 350px;
+    background-color: dimgrey;
+    height: 100%;
+    left:-320px;
+    transition: left 0.5s ease-in;
+}
+
+
+.menu_items_list{
+    padding-top: 30px;
+    position: relative;
+    list-style: none;
+    line-height: 1.8;
+    font-size: 25px;
+    margin-left: 30px;
+}
+
+.menu_items_list li a{
+    text-decoration: none;
+    color: lavender;
+}
+
+.menu_items_list li a:hover{
+    transition: color 0.3s ease-in;
+    color: orange;
+}
+
+.menu_items_list li::before{
+    content: '';
+    position: absolute;
+    border: black 2px solid;
+    background-color: orange;
+    height: 15px;
+    left: 0.1em;
+    transform: rotate(45deg) translateX(140%);
+    width: 15px;
+}
+
+.menu_opener{
+    content: '';
+    position: absolute;
+    width: 190%;
+    transform: rotate(90deg);
+    text-align: center;
+    color: lavender;
+    transition: color 0.5s ease-in;
+}
+
+.side_menu:hover{
+    left: -8px;
+}
+
+.side_menu:hover .menu_opener{
+    color: transparent;
+}
+
+@keyframes slidebox{
+    0%{
+        top: 0;
+        left: 0;
+        background: red;
+    }
+    25%{
+        top: calc(100% - 100px);
+        left: 0;
+        background: blue;
+    }
+    50%{
+        top: calc(100% - 100px);
+        left: calc(100% - 100px);
+        background: green;
+    }
+    75%{
+        top: 0;
+        left: calc(100% - 100px);
+        background: yellow;
+    }
+    100%{
+        top: 0;
+        left: 0;
+        background: red;
+    }
+}
+
+.box-wrap{
+    margin-top: 100px;
+    width: 300px;
+    height: 300px;
+    position: relative;
+}
+
+.holder{
+    width: 100px;
+    height: 100px;
+    background: red;
+    position: absolute;
+    animation: slidebox 2.0s infinite;
+}

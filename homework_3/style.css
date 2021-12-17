@@ -1,0 +1,56 @@
+.test_reset{
+    border: 10px solid rgb(219, 231, 176);
+    padding: 30px;
+    margin:  20px;
+    width: 400px;
+    display: inline-block;
+}
+
+.border_box{
+    box-sizing: border-box;
+}
+
+.content_box{
+    box-sizing: content-box;
+}
+
+.some_element{
+    width: 350px;
+    height: 220px;
+    padding: 15px 10px 20px 10px;
+    margin-bottom: 30px;
+    border: 2px dotted red;
+    background: green;
+}
+
+.paragraph{
+    width: 615px;
+    margin: 10px;
+}
+
+.simle_image{
+ padding: 20px;
+}
+
+.html_logo{
+    width: 200px;
+    float: left;
+    padding-left: 0;
+    padding-top: 0;
+}
+
+.htmlcss_logo{
+    float: right;
+    width: 150px;
+    padding-right: 0;
+}
+
+.paragraph_text{
+    text-align: justify;
+}
+
+.paragraph:after { 
+    content: " ";
+    display: table;
+    clear: both; 
+}
